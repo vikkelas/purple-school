@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0d7a80d-ec1b-4ce6-9ef3-27f0a31ba6b9" name="Changes" comment="Добавлена функция калькулятора.">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sumFunc.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672149794449</updated>
       <workItem from="1672149795541" duration="6665000" />
-      <workItem from="1672221293310" duration="1509000" />
+      <workItem from="1672221293310" duration="1898000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен Readme">
       <created>1672151276670</created>
@@ -92,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672221764290</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлена функция калькулятора.">
+      <created>1672223124324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672223124324</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Добавлена функция калькулятора.">
+      <created>1672223130663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672223130663</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +120,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/3-calc" />
+                        <option value="origin/feature/3-calc" />
                       </list>
                     </value>
                   </entry>
