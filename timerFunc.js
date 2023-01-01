@@ -1,10 +1,22 @@
+import notifier from 'node-notifier';
+
 const timerFunc = (string)=>{
     const arrTime = parserString(string);
     const timeTimer = +(arrTime[0]*360 + arrTime[1]*60 + arrTime[2])*1000;
     setTimeout(()=>{
-        console.log('таймер закончился');
+        notifier.notify({
+            sound: true,
+            wait: true,
+            title: "Таймер закончился ура!",
+            message: "Таймер закончился все операции успешны",
+        })
     }, timeTimer);
-    console.log(`таймер запущен на ${timeTimer/1000} секунд`);
+    notifier.notify({
+        sound: true,
+        wait: true,
+        title: "Таймер запущен",
+        message: `Таймер запущен на ${timeTimer/1000} секунд`,
+    })
 }
 
 const parserString = (string)=>{
