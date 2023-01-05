@@ -1,5 +1,7 @@
 import {Worker} from 'worker_threads'
-const arr = Array.from(Array(30000000),(_,i)=>i+1);
+const ARRAY_SIZE = 30_000_000
+const WORKER_COUNT = 4
+const arr = Array.from(Array(ARRAY_SIZE),(_,i)=>i+1);
 const spliceChunks = (arr, chunkSize)=>{
     const res = [];
     while (arr.length>0){
@@ -9,7 +11,7 @@ const spliceChunks = (arr, chunkSize)=>{
     return res;
 }
 
-const arrChunks = spliceChunks(arr,7500000);
+const arrChunks = spliceChunks(arr,ARRAY_SIZE/WORKER_COUNT);
 
 const compute = (arr)=>{
     return new Promise((resolve,reject)=>{
@@ -30,16 +32,9 @@ const compute = (arr)=>{
 const main  = async () => {
     try {
         performance.mark('start');
-        const result = await Promise.all([
-            compute(arrChunks[0]),
-            compute(arrChunks[1]),
-            compute(arrChunks[2]),
-            compute(arrChunks[3]),
-            // compute(arrChunks[4]),
-            // compute(arrChunks[5]),
-            // compute(arrChunks[6]),
-            // compute(arrChunks[7])
-        ])
+        const result = await Promise.all(
+            arrChunks.map(item=>compute(item))
+        )
         const number = result.reduce((accum,currentValue)=>accum+currentValue,0)
         console.log(number)
         performance.mark('end');
